@@ -1,0 +1,279 @@
+import numpy as np
+
+# Define the confusion matrix as a NumPy array
+confusion_matrix = np.array([[2077,46,4,190,0],
+                             [2, 2304, 9 ,1,1 ],
+                             [2,206,2106,3,0],
+                             [44,71,1,2201,0],
+                             [2,45,17,1,2252]])
+
+# Calculate the accuracy for each class
+class_accuracies = np.diag(confusion_matrix) / confusion_matrix.sum(axis=1)
+
+# Calculate the overall accuracy by averaging class accuracies
+overall_accuracy = np.mean(class_accuracies)
+
+print("Class Accuracies:", class_accuracies)
+print("Overall Accuracy:", overall_accuracy)
+=====================================================
+# short video Thermal_light off_withblanket
+# Model VGG-16
+confusion_matrix = np.array([[2077,46,4,190,0],
+                             [2, 2304, 9 ,1,1 ],
+                             [2,206,2106,3,0],
+                             [44,71,1,2201,0],
+                             [2,45,17,1,2252]])
+# Model MobileNet
+confusion_matrix = np.array([[2256,1,0,159,1],
+                             [2, 2304, 9 ,1,1 ],
+                             [2,206,2106,3,0],
+                             [44,71,1,2201,0],
+                             [2,45,17,1,2252]])
+# Model DenseNet201
+confusion_matrix = np.array([[2101,1,2,213,0],
+                             [0, 2298, 14,4,1],
+                             [1,117,2193,4,2],
+                             [0,164,0,2153,0],
+                             [1,16,83,3,2214]])
+# Model InceptionV3
+confusion_matrix = np.array([[2105,12,140,60,0],
+                             [0, 2145, 150,3,19],
+                             [0,81,2214,7,15],
+                             [125,137,14,2035,6],
+                             [0,25,36,4,2252]])
+=====================================================
+# short video Thermal_light off_withoutblanket
+# Model VGG-16
+confusion_matrix = np.array([[786,0,0,1,0],
+                             [0, 787, 0 ,0,0 ],
+                             [0,97,690,0,0],
+                             [3,0,0,784,0],
+                             [0,0,0,0,787]])
+# Model MobileNet
+confusion_matrix = np.array([[785,1,0,1,0],
+                             [0, 787, 0 ,0,0 ],
+                             [0,97,690,0,0],
+                             [40,0,0,747,0],
+                             [0,2,1,0,784]])
+# Model DenseNet201
+confusion_matrix = np.array([[785,0,0,2,0],
+                             [0, 787, 0 ,0,0 ],
+                             [0,91,696,0,0],
+                             [9,0,0,778,0],
+                             [0,0,1,0,786]])
+# Model InceptionV3
+confusion_matrix = np.array([[785,2,0,0,0],
+                             [0, 787, 0 ,0,0 ],
+                             [0,92,694,0,1],
+                             [9,0,0,778,0],
+                             [0,0,1,0,786]])
+=====================================================
+# short video Thermal_light on_withblanket
+# Model VGG-16
+confusion_matrix = np.array([[2175,0,0,2,0],
+                             [150, 1876, 24 ,127,0 ],
+                             [174,3,2000,0,0],
+                             [34,0,0,2143,0],
+                             [145,16,0,0,2016]])
+# Model MobileNet
+confusion_matrix = np.array([[2175,1,0,1,0],
+                             [128, 1999, 1 ,0,49 ],
+                             [7,140,2029,1,0],
+                             [71,0,0,2106,0],
+                             [0,2,0,0,2175]])
+# Model DenseNet201
+confusion_matrix = np.array([[2168,0,9,0,0],
+                             [159, 1871, 57 ,90,0 ],
+                             [19,17,2141,0,0],
+                             [36,0,0,2141,0],
+                             [12,1,0,2,2162]])
+# Model InceptionV3
+confusion_matrix = np.array([[2083,30,11,53,0],
+                             [8, 2067, 98 ,3,1 ],
+                             [1,16,2160,0,0],
+                             [165,22,2,1988,0],
+                             [0,7,31,0,2139]])
+=====================================================
+# short video Thermal_light on_withoutblanket
+# Model VGG-16
+confusion_matrix = np.array([[783,0,0,1,0],
+                             [0, 784,0 ,0,0 ],
+                             [0,0,783,1,0],
+                             [0,0,0,784,0],
+                             [0,0,0,0,784]])
+# Model MobileNet
+confusion_matrix = np.array([[784,0,0,0,0],
+                             [0, 784,0 ,0,0 ],
+                             [0,0,784,0,0],
+                             [0,0,0,784,0],
+                             [0,0,0,0,784]])
+# Model DenseNet201
+confusion_matrix = np.array([[784,0,0,0,0],
+                             [0, 784,0 ,0,0 ],
+                             [0,0,784,0,0],
+                             [0,11,0,773,0],
+                             [0,0,1,0,783]])
+# Model InceptionV3
+confusion_matrix = np.array([[784,0,0,0,0],
+                             [0, 779,0 ,5,0 ],
+                             [0,0,784,0,0],
+                             [0,0,0,784,0],
+                             [0,0,2,0,782]])
+=====================================================
+# short video RGB_light off_withblanket
+# Model VGG-16
+confusion_matrix = np.array([[701,1,22,0,0],
+                             [7, 611,103 ,0,3 ],
+                             [0,3,721,0,0],
+                             [0,0,0,724,0],
+                             [0,0,0,0,724]])
+# Model MobileNet
+confusion_matrix = np.array([[724,0,0,0,0],
+                             [40, 621,63 ,0,0 ],
+                             [0,0,724,0,0],
+                             [0,0,0,724,0],
+                             [0,0,0,0,724]])
+# Model DenseNet201
+confusion_matrix = np.array([[723,0,0,1,0],
+                             [0, 621,103 ,0,0 ],
+                             [0,2,722,0,0],
+                             [0,0,0,724,0],
+                             [0,0,0,0,724]])
+# Model InceptionV3
+confusion_matrix = np.array([[723,0,0,1,0],
+                             [20, 621,81 ,2,0 ],
+                             [0,0,724,0,0],
+                             [0,0,0,724,0],
+                             [0,0,0,0,724]])
+=====================================================
+# short video RGB_light off_withoutblanket
+# Model VGG-16
+confusion_matrix = np.array([[720,48,0,22,0],
+                             [0, 790,0 ,0,0 ],
+                             [0,124,740,24,2],
+                             [0,2,0,788,0],
+                             [0,42,24,0,724]])
+# Model MobileNet
+confusion_matrix = np.array([[720,0,0,70,0],
+                             [0, 790,0 ,0,0 ],
+                             [0,148,642,0,0],
+                             [0,0,0,790,0],
+                             [0,39,0,0,751]])
+# Model DenseNet201
+confusion_matrix = np.array([[720,0,0,70,0],
+                             [0, 790,0 ,0,0 ],
+                             [0,68,652,70,0],
+                             [0,0,0,790,0],
+                             [0,42,0,24,724]])
+# Model InceptionV3
+confusion_matrix = np.array([[720,7,0,63,0],
+                             [0, 790,0 ,0,0 ],
+                             [0,148,642,0,0],
+                             [0,0,0,790,0],
+                             [0,8,0,1,781]])
+
+
+=====================================================
+# short video RGB_light on_withblanket
+# Model VGG-16
+confusion_matrix = np.array([[6463,0,0,148,0],
+                             [0, 5871,740 ,0,0 ],
+                             [0,32,6406,173,0],
+                             [0,0,0,6611,0],
+                             [0,0,0,0,6611]])
+# Model MobileNet
+confusion_matrix = np.array([[6611,0,0,0,0],
+                             [5, 5798,510 ,0,298 ],
+                             [514,366,5721,10,0],
+                             [0,0,0,6611,0],
+                             [0,0,0,0,6611]])
+# Model DenseNet201
+confusion_matrix = np.array([[6611,0,0,0,0],
+                             [0, 6104,507 ,0,0 ],
+                             [0,193,6418,0,0],
+                             [0,0,0,6611,0],
+                             [0,0,0,0,6611]])
+# Model InceptionV3
+confusion_matrix = np.array([[6607,0,0,4,0],
+                             [286, 5868,453 ,0,4 ],
+                             [50,509,6052,0,0],
+                             [0,0,0,6611,0],
+                             [0,32,17,0,6562]])
+# short video RGB_light on_withoutblanket
+# Model VGG-16
+confusion_matrix = np.array([[4499,0,0,0,0],
+                             [0, 4474,0 ,0,0 ],
+                             [0,194,4406,0,0],
+                             [541,0,0,3964,0],
+                             [0,0,0,0,4505]])
+# Model MobileNet
+confusion_matrix = np.array([[4499,0,0,0,0],
+                             [0, 4474,0 ,0,0 ],
+                             [0,0,4600,0,0],
+                             [535,0,0,3970,0],
+                             [0,0,0,0,4505]])
+# Model DenseNet201
+confusion_matrix = np.array([[4028,0,0,471,0],
+                             [0, 4474,0 ,0,0 ],
+                             [0,65,4535,0,0],
+                             [2,0,0,4503,0],
+                             [0,0,0,0,4505]])
+# Model InceptionV3
+confusion_matrix = np.array([[3971,0,189,339,0],
+                             [0, 4474,0 ,0,0 ],
+                             [0,197,4403,0,0],
+                             [541,0,0,3964,0],
+                             [0,0,0,0,4505]])
+=====================================================
+# Light-Off_withoutBlanket_long vdo
+# Model VGG-16
+confusion_matrix = np.array([[1646,0,0,4,0],
+                             [0, 950,700 ,0,0 ],
+                             [0,0,1650,0,0],
+                             [140,331,2,1175,2],
+                             [0,179,102,0,1369]])
+# Model MobileNet
+confusion_matrix = np.array([[1650,0,0,0,0],
+                             [36, 1451,0 ,4,159 ],
+                             [0,0,1650,0,0],
+                             [385,2,0,1263,0],
+                             [0,121,0,0,1529]])
+# Model DenseNet201
+confusion_matrix = np.array([[1650,0,0,0,0],
+                             [0, 1219,357 ,0,74 ],
+                             [0,0,1650,0,0],
+                             [264,0,42,1344,0],
+                             [0,30,26,0,1594]])
+# Model InceptionV3
+confusion_matrix = np.array([[1650,0,0,0,0],
+                             [5, 951,619 ,12,63 ],
+                             [0,0,1650,0,0],
+                             [572,3,1,1072,2],
+                             [4,139,92,0,1415]])
+
+=====================================================
+# Light-Off_withBlanket_long vdo
+# Model VGG-16
+confusion_matrix = np.array([[14,2,64,39,1],
+                             [18, 56,13 ,24,9 ],
+                             [0,0,67,53,0],
+                             [0,0,5,115,0],
+                             [0,0,14,0,106]])
+# Model MobileNet
+confusion_matrix = np.array([[0,86,1,29,4],
+                             [0, 96,0 ,21,3 ],
+                             [0,0,0,120,0],
+                             [0,31,0,88,1],
+                             [0,19,0,1,100]])
+# Model DenseNet201
+confusion_matrix = np.array([[0,33,2,11,74],
+                             [2, 64,2 ,44,8 ],
+                             [0,0,24,2,94],
+                             [1,69,6,34,10],
+                             [2,8,1,4,105]])
+# Model InceptionV3
+confusion_matrix = np.array([[2,9,97,10,2],
+                             [1, 66,45 ,4,4 ],
+                             [0,4,114,0,2],
+                             [10,0,70,39,1],
+                             [0,40,35,8,37]])
